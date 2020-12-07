@@ -7,6 +7,7 @@ var db = require("./models");
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(__dirname + "/views"));
+app.use(express.static(__dirname + "/public"));
 
 app.get("/", (req, res) => {
   res.sendFile("index.html");
